@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prueba Express</title>
+  </head>
+  <body>
+    <h1>Prueba Express</h1>
+    <p>Hello World!</p>
+
+    <a href="/home">home</a>
+
+    <p id="message"></p>
+
+    <script>
+      async function getMessage() {
+        const data = await fetch("/datos").then((res) => res.json());
+        document.getElementById("message").innerText = data.message;
+      }
+      getMessage();
+    </script>
+  </body>
+</html>
