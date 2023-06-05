@@ -6,6 +6,6 @@ function sumArrayValues(array) {
   return sum;
 }
 
-const array = [1, 11, 3, 5, 8];
+const array = [1, 11, 4, 5, 8];
 
 console.log(sumArrayValues(array));
