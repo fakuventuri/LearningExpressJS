@@ -1,20 +1,13 @@
-function sumArrayValues(array) {
-  let sum = 0;
-  for (let i = 0; i < array.length; i++) {
-    sum = sum + array[i];
-  }
-  return sum;
+function sumValues(val1, val2) {
+  return val1 + val2;
 }
 
-function multiplyArrayValues(array) {
-  let sum = 1;
-  for (let i = 0; i < array.length; i++) {
-    sum = sum * array[i];
-  }
-  return sum;
+function multiplyValues(val1, val2) {
+  return val1 * val2;
 }
 
-const array = [1, 11, 4, 5, 88];
+const value1 = 8;
+const value2 = 4;
 
-console.log("Sum: " + sumArrayValues(array));
-console.log("Multiply: " + multiplyArrayValues(array));
+console.log("Sum: " + sumValues(value1, value2));
+console.log("Multiply: " + multiplyValues(value1, value2));
