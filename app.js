@@ -2,18 +2,20 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-const datos = { message: "Facu te amo", name: "Jorge" };
+app.use(express.json());
+app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.get("/home", (req, res) => {
-  res.redirect("/datos");
+app.get("/:username", (req, res) => {
+  res.send(`Hola ${req.params.username}`);
 });
 
-app.get("/datos", (req, res) => {
-  res.json(datos);
+app.post("/", (req, res) => {
+  console.log(req.body.name);
+  res.redirect("/" + req.body.name);
 });
 
 app.listen(port, () => {
