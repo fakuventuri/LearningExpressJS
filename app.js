@@ -19,7 +19,11 @@ app.use(express.urlencoded());
 // });
 
 app.get("/Facu/Capo", (req, res) => {
-  console.log(req.query);
+  const numero1 = parseInt(req.query.numero1);
+  const numero2 = parseInt(req.query.numero2);
+  console.log(numero1);
+  console.log(numero2);
+  console.log(`El resultado de las queries es: ${numero1 + numero2}`);
   res.send("Hola Facu");
 });
 
